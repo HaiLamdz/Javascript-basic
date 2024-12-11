@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    // var | let | const
+
+    // điểm giống nhau : đều dùng để khhai báo biến
+    var hoTen = "Vũ Hải Lam";
+    let age = 18;
+    const queQuan = "Sơn La";
+    console.log(hoTen);
+    console.log(age);
+    console.log(queQuan);
+
+    // khác nhau
+    // -var, let đều có thể gán lại được giá trị
+
+    var a = "Vũ Hải Lam";
+    a = "Hà Ngọc Nam";
+    console.log(a);
+
+    let c = "Hà Ngọc Nam";
+    c = "Vũ Hải Lam";
+    console.log(c);
+    // const thì ko gán lại đc giá trị
+    // const b = "Vũ Hải Lam";
+    // b = "Hà Ngọc Nam";
+    // console.log(b);
+    // lỗi ko gán lại được
+
+    // var khai báo lại được
+    var d = 2000;
+    var d = 500;
+    console.log(d);
+    // let và const thig khonggg
+    // let e = 200;
+    // let e = 100;
+    // console.log(e);
+
+    // var, let thì ko cần gái trị khởi tạo
+    var thoitiet;
+    console.log(thoitiet);
+    // const thì ko đc
+
+    // var có thể truy cập bên ngoài của code, truy caapj từ bất kỳ đâu
+    if(true){
+        var ny = "Trần văn mạnh"
+    }
+    console.log(ny);
+    // let thì ko thể truy cập bên ngoài scope
+    // if(true){
+    //     let anhtrai = "Nguyễn Văn Long"
+    // }
+    // console.log(anhtrai);
+    // const thì ko thể truy cập bên ngoài scope
+    // if(true){2005
+    //     const emtrai = "Nguyễn ngọc an"
+    // }
+    // console.log(emtrai);
+// ví dụ nhập vào tên, năm sinh giưới tính (nam = 0), nữ = (1), kiểm tra ng đó có đủ tưởi đi nvqs hay khonggg
+// và hiện thị ra thông báo (alerrt ) ông bà có duur tuổi đi nvqs ko
+// tuuooit sẽ lấy năm hiện tại trừ năm sinh
+// >18 and >27
+    var ten = prompt("nhập vào tên: ");
+    var nansinh = prompt("nhập vào Năm sinh: ");
+    var gioitinh = prompt("nhập vào giói tính: ");
+    var namHT = 2024;
+    var tuoi = Number(2024) - Number(nansinh);
+    // console.log(ten);
+    // console.log(tuoi);
+    // if (tuoi > 18 && tuoi < 27 && gioitinh ==0){
+    //     console.log("giới tính nam");
+    //     alert("đủ tuổi đi nvqs");
+    // }else if(tuoi < 18 && tuoi > 27 && gioitinh ==0 ){
+    //     console.log("giới tính nam");
+    //     alert("không đủ tuổi đi nvqs");
+    // }else if(tuoi > 18 && tuoi < 27 && gioitinh == 1){
+    //     console.log("giới tính nữ");
+    //     alert("đủ tuổi đi nvqs");
+    // }
+    // else{
+    //     console.log("giưới tính nữ");
+    //     alert("ko dủ tuổi đi nvqs");
+    // }
+    // cách 2
+    // if(gioitinh==0){
+    //     if(tuoi < 18 && tuoi > 27 ){
+    //         alert("Ông đủ tuổi đi nvqs");
+    //     }else{
+    //         alert("Ông không đủ tuổi đi nvqs");
+    //     }
+    // }else if(gioitinh != 1 && gioitinh != 0){
+    //     alert("giới tính ko hợp lệ")
+    // }
+    // else{
+    //     if(tuoi > 18 && tuoi < 27 ){
+    //         alert("Bà đủ tuổi đi nvqs");
+    //     }else{
+    //         alert("Bà không đủ tuổi đi nvqs");
+    //     }
+    // }
+    // toán tử 3 ngôi
+    let checkgioitinh = gioitinh == 0 ? 'ông' : 'bà'
+    let checktuoi = tuoi >= 18 && tuoi <= 27 ? 'đã đủ tuổi đi nvqs' : 'không được đi nvqs'
+    alert(`${checkgioitinh} ${checktuoi}`)
+</script>
+</html>

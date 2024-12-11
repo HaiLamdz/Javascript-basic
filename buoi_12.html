@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>đưa câu xin chào vào đây</h1>
+    <h1>lam</h1>
+    <h1>vũ</h1>
+    <p>Lam đẹp zai</p>
+    <button onclick="tangkichthuoc()">tăng kích thước</button> <br>
+    <span>lam 1</span><br><span>lam2</span><br><span>lam3</span><br><span>lam4</span><br><span>lam5</span>
+</body>
+<script>
+    // js
+    console.log("hi xin chào");
+    // alert("hello");
+    let hello = "xin chào";
+
+    // DOM trong js (document object module)
+    // 1 DOM tagname 
+    let domTagName = document.getElementsByTagName('h1');
+    console.log(domTagName);
+    console.log("thẻ thứ nhất là: ", domTagName[0].innerText);
+    console.log("thẻ thứ nhất là: ", domTagName[0].innerHTML);
+    // thay đổi dữ liệu từ html 
+    // sử nội dun
+    // domTagName[1].innerHTML= "hôm nay trời nangex to" 
+    domTagName[1].innerHTML = "<button> Thêm Sữ Liệu </button>";
+    
+    // sửa style 
+    domTagName[0].style.color = 'red';
+    domTagName[0].style.textAlign = 'center';
+    for(let index = 0; index < domTagName;index++){
+        domTagName[index].style.textAlign = 'center';
+    }
+    // co 1 thẻ p có font size = 10px 
+    // sử dugnj dom domTagName để thay đổi nội dung của thẻ: hôm nay tôi đi học 
+    // tạo  1 nút sử dụng onclick gọi hàm tangkichthoc, mỗi làn ấn fontsize sẽ cộng 5px 
+    // let name = document.getElementsByTagName('p');
+    // console.log(name);
+    // name[0].innerText = "hôm nay tôi đi học";
+    // name[1].innerHTML = "<button >Tăng kích thước</button>";
+    // let a = name[0].style.fontSize;
+    // function tangkichthuoc(){
+    //     let content = document.getElementsByTagName('p')
+    //     let size = parseInt(a) + 5;
+    //     content.style.fontSize = size + 'px';00
+    // }
+    domTagNameP = document.getElementsByTagName('p');
+    // xét fontsize 
+    domTagNameP[0].style.fontSize = '10px';
+    // thay đổi nội dung 
+    domTagNameP[0].innerText = "hôm nay tôi đi học";
+    // tạo nút onclick của hàm tangkichthuoc
+    let size = 10;
+        function tangkichthuoc(){
+            size += 5;
+            console.log(size);
+            domTagNameP[0].style.fontSize = size + 'px';
+        }
+    let domTagNamespan = document.getElementsByTagName('span');
+    let arrColor = ['red', 'blue', 'green', 'black', 'orange'];
+    console.log(domTagNamespan) 
+    for (let index = 0; index < domTagNamespan.length; index++) {
+        domTagNamespan[index].style.color = arrColor[index];
+        
+    }
+    
+    // name[0].style.fontSize = '10px';
+    // name[0].style.fontSize = '10px';
+    // let size = name[0].style.fontSize;
+    
+    // let newsize = parseInt(size) + 5; 
+    // name.style.fontSize = newsize + 'px';
+
+    // 2 DOM class 
+    // 3 DOM id 
+</script>
+</html>

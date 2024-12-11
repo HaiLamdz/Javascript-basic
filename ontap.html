@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // bài 1: Khai báo 1 mảng (tuần tự) các số nguyên gồm 10 phần tử. Tính tổng các số chẵn nằm trong mảng 
+    // bài 2: Khai báo 1 mảng (liên hợp) thông tin của nyc (họ tên, năm sinh, giới tính, sđt, địa chỉ). Hiển thị toàn bộ thông tin ra màn hình 
+    let arr = [1,2,3,4,5,6,7,8,9,10];
+    let tongChan = 0;
+    for(let i = 0;i < arr.length;i++){
+        if(arr[i]%2==0){
+            tongChan += arr[i];
+        }
+    }
+    console.log(arr);
+    console.log("tổng các số chắn mảng trên là: ",tongChan);
+    //  bài 2 
+    let arrSV ={
+        hoTen : "Vũ Hải Lam",
+        namSinh : 2005,
+        gioiTinh : "Nam",
+        SĐT : "09667011544",
+        Diachi : "Hà Nội"
+    }
+    console.log(arrSV.hoTen);
+    for(var key in arrSV){
+        console.log(arrSV.has);
+    };
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // object trng js
+    var emailKey = 'email';
+    var myInfo = {
+        name : 'nam',
+        age : 18,
+        address : 'hà nội',
+        [emailKey] : 'vuhailam2112@gmail',
+        getName : function(){
+            return this.name;
+        }
+    }
+    console.log(    myInfo.getName());
+    myInfo.email = 'vuhailam2112@gmail.com';
+    console.log(myInfo);
+    // xóa key muốn xóa
+    delete myInfo.name;
+    // object construtor
+
+    function user(firstName, lastName, avata){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.avata = avata;
+        this.getTen = function (){
+            return `${this.firstName} ${this.lastName}`;
+        }
+    }
+    var author = new user('lam', 'vũ','avata');
+    author.title = 'Vũ Hải Lam';
+    console.log(author.getTen());
+    
+</script>
+</html>

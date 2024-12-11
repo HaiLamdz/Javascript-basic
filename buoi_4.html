@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // // mảng trong js
+    // // mảng là 1 tập hợp chứa rất nhiều ccacs phhaanf tử
+    // // cách khai báo mảng
+    // // cách 1: 
+    // // let arrsv = new Array(1, 2, 3, 4, "Vũ Hải Lam");
+    // // console.log(arrsv);
+    // // cách 2: 
+    // // let arrsv1 = [1,2,3,4, "vũ Hải Lam"];
+    // // console.log(arrsv1);
+    // // // mảng gồm 2 thành phần là index và valuse
+    // // // ví dụ khai báo 1 mảng gồm 10 phần tử là sso nguyên
+    // // // lấy ra giá trị 5 phần tử bất kỳ
+    // // let arrNumber = [1,2,3,4,5,6,7,8,9,10];
+    // // console.log(arrNumber);
+    // // console.log("số thử 2 trong mảng là: ", arrNumber[1]);
+    // // console.log("số thử 3 trong mảng là: ", arrNumber[2]);
+    // // console.log("số thử 4 trong mảng là: ", arrNumber[3]);
+    // // console.log("số thử 6 trong mảng là: ", arrNumber[5]);
+    // // console.log("số thử 7 trong mảng là: ", arrNumber[6]);
+    // // khai báo 1 mảng gồm 5 phần tử là chuỗi(string)
+    // let array = ['minh', "lam",  "liinh", "mai", "mạnh", "lam", "hiếu"];
+    // console.log(array);
+    // // lấy ra đọ dài của mảng
+    // console.log("độ dài của mảng: ", array.length);
+    // // index phần tử cuối cùng trong mảng
+    // console.log("index phần tử cuối cùng trong mảng: ", array.length-1);
+    // // lấy ra giá trị cuối cùng của mảng
+    // console.log("giá trị cuối cungf của bảng: ", array[array.length-1]);
+    // // thêm phần tử vào mảng
+    // // thêm phần tử vào cuối mảng
+    // // thêm phần tử vaof cuối mảng _push thêm vào và trả về dộ dài mới của bảng
+    // console.log(array.push("quyên"));
+    // console.log(array);
+    // //thêm vào đầu mảng - shift
+    // console.log(array.unshift("đức anh"));
+    // console.log(array);
+    // // xóa phần tử trong mảng
+    // // xóa phần tử cuối mảng và trả về giá trị phần bị xóa
+    // console.log("bạn vừa xóa :", array.pop());
+    // // xóa phần tử đầu mảng
+    // console.log("bận vừa xóa: ", array.shift());
+    // // xoa sphaanf tử theo vị trí 
+    // console.log(array.splice(1,2));//
+    // // splice(x,y)
+    // // x là vị trí phần tử mốn xóa
+    // // y là tổng số phần tử muốn xóa
+    // // chèn phần tử 
+    // console.log(array.splice(1, 2, "đạt", "đức em"));
+    // //cắt phàn tử
+    // // x là vị trí bđầu cắt, y là vị trí kết thúc
+    // console.log(array.slice(1,3));
+    // console.log(array);
+    // // tìm kiếm 
+    // // trả về giá trị đầu tiên xuất hiện
+    // console.log("index của phần tử cần tìm là: ", array.indexOf("lam"));
+    // //trả về giá trị cuối cùng xuất hiện
+
+    // console.log("index ccuar phần tử cưới cùng cần tìm là: ", array.lastIndexOf("lam"));
+    // ví dụ khai báo 1 mảng gồm 10 phần rtuwr cacsc số từ 1 - 12
+    // lấy ra độ dài của mảng
+    // lấy ra số cuối cùng trong mảng
+    // lấy ra số có index là 5, 7, 10 trong mảng
+    // thêm số 99 vào vị tri sđầu tiên trong mảng
+    // thêm số 123 vào vị trí cuối cùng trong mảng
+    // chèn thêm số 1000 vào vị trí index = 10
+    // chèn thêm số 2 vào index = 12
+    // tìm index của số 2 xuất hieenj đầu tiên trong mảng 
+    //tìm index của số 2 xuất hieenj cuối cùng trong mảng
+    let  arr = [1,2,3,4,5,6,7,8,9,10,11,12];
+    console.log(arr.length);
+    console.log("giá trị cuối cùng của mảng là: ", arr[arr.length-1]);
+    console.log("index 5 là: ", arr[5]);
+    console.log("index 7 là: ", arr[7]);
+    console.log("index 10 là: ", arr[10]);
+    console.log(arr.push(123));
+    console.log(arr.unshift(99));
+    console.log(arr.splice(10,0, 1000));
+    console.log(arr.splice(12,0, 2));
+    console.log(arr);
+    console.log("phần tử 2 xuất hiện đầu tiên: ", arr.indexOf(2));
+    console.log("phần tử 2 xuất hiện cuối cùng : ", arr.lastIndexOf(2));
+
+    
+</script>
+</html>

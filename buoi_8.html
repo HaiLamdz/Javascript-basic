@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // hàm trong js
+    let hello = "Xin chào tất cả mọi người";
+    console.log(hello);
+
+    console.log("hôm nay là thứ tư");
+    let arrNum = [];
+    for(let i = 1;i <= 7; i++){
+        arrNum.push(i)   
+    }
+    console.log(arrNum);
+
+    function xinChao(){
+        console.log("xin chào tất cả các bạn");// đoạn mã đc thực thi khi gọi hàm
+    }
+    xinChao();
+    // phân loại hàm 
+
+    // hàm không trả về không tham số
+    function Story(){
+        // khi gọi hàm này, đoạn mã bên trong đây sẽ đc thực thi
+        console.log("hôm nay tôi bùn");
+        console.log("hahahhah");
+    }
+    Story();
+    // hàm không trả về có tham số
+    // function Hoten(name) {
+    //     console.log("tôi đg thích bạn: " , name);
+    //     console.log("nhưng bạn", name , "đã có người iuu");
+    // }
+    // Hoten("Vũ Hải Lam");
+    // function Tinhtong(a , b) {
+    //     let sum = a + b;
+    //     console.log("tổng là: ", sum);
+    // }
+    // Tinhtong(3,7);
+    // // ví dụ viết 1 hàm đưa vào tham số 'namecrush'
+    // // nhập vào màn hình tên bất kỳ
+    // // in ra "tôi đang thích bạn: ".
+    // crush = prompt("nhập tên: ");
+    // function name(namecrush) {        
+    //     console.log("Tôi đang thích bạn: " , namecrush);
+    //     console.log("Vì" , namecrush, "đọc thân, xinh trai");
+    // }
+    // name(crush);
+    // // ví dụ 2: viết hàm đưa vào hai số 
+    // // lần lượt 2 số vào màn hình in ra tổng hiệu tích thuong của 2 số 
+    // let x = prompt("nhập x:");
+    // let y = prompt("nhập y: ");
+    // function Tinh(x,y) {
+    //     tong = Number(x) + Number(y);
+    //     hieu = x - y;
+    //     thuong = x / y;
+    //     tich = x *y;
+    //     console.log("tổng là: ", tong);
+    //     console.log("hiệu là; ", hieu);
+    //     console.log("thương là: ", thuong);
+    //     console.log("tích là: ", tich);
+    // }
+    // Tinh(x,y);
+
+    // hàm trả về
+    // hàm trả về có câu lệnh return để trả về giá trị từ trong hàm
+    // thường dược sử dụng để tính toàn giá trị và trả về kết quả
+    // khi gọi hàm có trả về, nó sẽ thực hiện caccs lệnh bên trong hàm và tính toán trả về giá trị
+    // ddeeer trả về giá trị, sử dụng câu lệnh return
+
+    // hàm trả về không tham số
+    function weather(){
+        return "hôm này trời nắng to";
+    }
+    console.log(weather);
+    // ví dụ: viết hàm để hiển thị năm hiện tại
+    function getYears() {
+        return new Date().getFullYear();
+    }
+    console.log("năm này là năm : " , getYears());
+    // ví dụ 2 : viết hàm để hiện thị ngày tháng hôm nay
+    function getDate(){
+        let ngay = new Date().getDate();
+        return ngay;
+    }
+    getDate();
+    function getMonth() {
+        let thang = new Date().getMonth() + 1;
+        return thang;
+    }
+    getMonth();
+    function getYear(){
+        let nam = new Date().getFullYear();
+        return nam;
+    }
+    getYear();
+    console.log("hiện tại là: " , getDate() , getMonth() , getYear());
+    // cách 2:
+    function now(){
+        date = new Date().getDate();
+        month = new Date().getMonth() + 1;
+        year = new Date().getFullYear();
+        present = "ngày " + date + " tháng " + month + " năm " + year;
+        return present;
+    }
+    console.log(now());
+    // hàm trả về có tham số 
+    function TinhTong(a,b){
+        sum = a + b;
+        return sum;
+    }
+    console.log(TinhTong(3,5));
+    console.log(TinhTong(1,6));
+    // ví dụ : viết hàm có trả về - có tham số đưa vào 'myName', 'nameCrush'
+    // nhập vào màn hình tên của ban
+    // nhập vào màn hình tên của cr
+    // in ra tôi đg thích cr
+    let myName = prompt("nhập tên bạn: ");
+    let nameCrush = prompt("nhập tên cr: ");
+    function name(crush){
+        cr = "Tôi là " + myName + " đang thích bạn " + nameCrush
+        console.log(cr);
+    }
+    name(myName, nameCrush)
+
+    // ví dụ 2:
+    // viết hàm trả về có tham số nhập vào 2 sô
+    // dùng hàm tính phương trình bậc 1
+    var a = prompt("nhập a: ");
+    var b = prompt('nhập b: ');
+    function GiaiPT(a,b) {
+        if(a==0){
+            if(b == 0){
+                return "Phương trình vô số nghiệm";
+            }else{
+                return "phương trình vô nghiệm";
+            }
+        }else{
+            if(b == 0){
+                return "phườn trình có nghiệm x = 0";
+            }else{
+                nghiem = -b/a;
+                return "phương trình có nghiệm x = " + nghiem;
+            }
+        }
+    }
+    console.log(GiaiPT(a,b));
+    // hàm không trả về
+    // được sử dụng để thực hiện các tác vụ cụ thể mà kgoong cần trả về kết quả
+    // khi gọi 1 hàm không trả về, nó chỉ thực hiện các lẹnh bên trong mà không trả về giá trị
+    // giá trị trả về mạc định của hàm không trả về là undefine
+
+    
+</script>
+</html>

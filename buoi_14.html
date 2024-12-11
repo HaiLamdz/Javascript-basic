@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>trường dữ liệu</th>
+            <th>nội dung nhập</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>tài khoản</td>
+                <td><input type="text" id="taikhoan">
+                    <span style="color: red;" class="mess"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>mật khẩu</td>
+                <td>
+                    <input type="text" id="matkhau">
+                    <span style="color: red;" class="mess"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" onclick="dangnhap()">submit</button>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+<script>
+function dangnhap(){
+    let taikhoan = document.getElementById('taikhoan').value;
+    let matkhau = document.getElementById('matkhau').value;
+    // console.log("tài khoản nhập vào: " . taikhoan);
+    // console.log("mk nhập vào: " . matkhau);
+    let mess = document.getElementsByClassName('mess')
+    // khởi tạo 1 biến check 
+    let check = true;
+    // validate - điều kiện
+    // tài khoản và mất khaaur không đc để trống
+    // mật khẩu và tài khoản ko đc để trống 
+    // if(taikhoan == ''){
+   
+    //     check = false; 
+    //     mess[0].innerText = 'vui lòng điền tk '
+    // }else{
+    //     mess[0].innerHTML = '';
+    // }
+    if(matkhau == ''){
+        check = false;
+        mess[1].innerText = 'vui lòng điền mk '
+    } else{
+        mess[1].innerHTML = '';
+    }
+
+    // if(check == true){
+    //     // xử lý đăng nhập
+    //     alert("đăng nhập thành công")
+    // }else{
+    //     alert("đăng nhập thất bại")
+    // }
+         // validate - regex - toán tử\
+
+    //  let regexmatkhau = /^(?=.*?[0-9]).{8,}$/
+    //  if(!regexmatkhau.test(matkhau)){
+    //     check = false;
+    //     mess[1].innerHTML = "MK chưa đủ điều kiện";
+    //  }else{
+    //     check = true;
+    //     mess[1].innerHTML = "ok";
+    //  }
+
+         // check nhập số
+    if(isNaN(taikhoan)){
+   
+        check = false; 
+        mess[0].innerText = 'tk phải là số '
+    }else if(taikhoan.length < 8){
+        check =false
+        mess[0].innerText = 'tk phải lớn hơn 8 ký tự '
+    }
+    else{
+        mess[0].innerHTML = '';
+    }
+     // check độ dài > 8
+
+
+
+
+
+
+    }  
+
+
+
+</script>
+</html>

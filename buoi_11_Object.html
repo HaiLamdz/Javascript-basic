@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // // object đói tượng 
+    // // nó là 1 kiểu dữ liệu cơ bản quan trọng của Js 
+    // // obj tập hợp các thuộc tính(properties) và các phương thức(methods) 
+    // // mỗi thuộc tính sẽ là 1 cặp key-values 
+    // // valuse có thể là bất kỳ dữa liệu nào, nó cũng có thể là đói tượng khác 
+    // // cách khởi tạo đói tượng 
+    // let SinhVien = {
+    //     name : "Vũ Hải Lam",
+    //     SVien : ["nam" , "hiếu", "lam"],
+    //     age : 19,
+    //     status : true,
+    //     sayhello : function(){
+    //         console.log("xin chào tất cả những nguoif ae thiện lành");
+    //     },
+    //     sayhello1 : function (){
+    //         console.log("hello world");
+    //     },
+    //     private : {
+    //         sdt : 1234,
+    //         ny: "Hải Lam",
+    //         sayhello3 : function(){
+    //             console.log("ditj chào nữa");
+    //         }
+    //     }
+    // }
+
+    // // cách truy vẫn đối tượng
+    // console.log(SinhVien.private);
+    // SinhVien.sayhello();
+    // SinhVien.private.sayhello3();
+    // console.log(SinhVien.SVien[0]);
+
+    // // khai báo 1 đối tượng là persion gồm các thuộc tính
+    // // ten, nam sinh, lop hoc, chieu cao, can nang 
+    // // chieu cao, can nang, nam sinh sẽ nhập vào màn hình 
+    // // hienr thị toàn bộ thông tin 
+    // // tạo 1 hàm tính chỉ số BMI và hiển thị ra kết quả, kèm thông báo
+    // // tạo 1 hàm tính tuôi của đối tượng
+    //  let persion = {
+    //     hoTen : "Vũ Hải Lam",
+    //     namSinh : 2005,
+    //     class : "wd19333",
+    //     chieuCao : "1.70",
+    //     canNang : "50",
+    //     BMI : function(){
+    //         var bmi = this.canNang / (this.chieuCao * this.chieuCao);
+    //         alert("Chỉ số BMI của bạn là: " + bmi);
+    //     },
+    //     Age : function () {
+    //         var age = new Date().getFullYear() - this.namSinh;
+    //         console.log("tuổi của bạn là: " ,age);
+    //     }
+    //  };
+    //  console.log(persion.hoTen);
+    //  console.log(persion.namSinh);
+    //  console.log(persion.class);
+    //  console.log(persion.chieuCao);
+    //  console.log(persion.canNang);
+    // persion.Age(); 
+    // persion.BMI();    
+    // class sẽ là khuôn maauxx tạo ra nhiều đói tượng giống nhau
+    // function tenClass(Tham số 1, tham số 2,.... tham số n) 
+    // let sv = {
+    //     name: 'Vũ Hải Lam',
+    //     age: 18,
+    //     listSV: ["'a", "b", "c"],
+    //     status : true,
+
+    //     sayhello : function (){
+    //         console.log('Xin chào các bạn nhé');
+    //     }
+    // }
+    // // tạo ra class khuôn mẫu 
+    // function classStudent(ten, tuoi, list, status){
+    //     this.name = ten;
+    //     this.age = tuoi;
+    //     this.listSV = list;
+    //     this.status = status; 
+        
+    //     this.sayhello = function(){
+    //         console.log("xin chào class");
+    //     }
+    // }
+    // // khởi tạo object từ class
+    // let SV1 = new classStudent('Vũ Hải Lam', 19, ["lam", "hieu", "hưng"], false);
+    // console.log(SV1);
+    // console.log(SV1.age);
+    // SV1.sayhello();
+    // viết chương trình nhập vào màn hình các thông tin: họ tên , sdt, nam sinh, que quan, can nang, chieu cao 
+    // tạo 1 class nhận vào các thông tin trên 
+    // viết hàm tính tuổi của người đó (trong class)
+    // viết hàm trả về có tham số tính chỉ số bmi (trong class)
+    // hiển thị thông báo về tình trang sức khỏe theo chỉ số BMi 
+    // in ra màn hình tất cả các thông tin sau khi nhập
+
+    function classMenber(hoten, sdt, namSinh, queQuan, canNang, chieuCao){
+        this.hoten = hoten;
+        this.sdt = sdt;
+        this.namSinh = namSinh;
+        this.queQuan = queQuan;
+        this.canNang = canNang;
+        this.chieuCao = chieuCao;
+        this.age = function ageMenber(){
+            let tuoi = new Date().getFullYear() - this.namSinh;
+            console.log(tuoi);
+        }
+        this.BMI = function(){
+            let chisobmi = canNang/chieuCao*chieuCao;
+            if(chisobmi<17){
+                alert("gầy");
+            }else if(17<= chisobmi <= 18){
+                alert("bình thường");
+            }else{
+                alert("béo phì");
+            }
+            return chisobmi;
+            }
+    }
+
+    let menber = new classMenber (
+        prompt("nhập họ và tên"),
+        prompt("nhập sđt: "),
+        prompt("nhập năm sinh: "),
+        prompt("nhập quê quán: "),
+        prompt("nhaapk cân nặng: "),
+        prompt("nhập chiều cao: ")
+    )
+    
+    console.log(menber);
+    console.log(menber.hoten);
+    console.log(menber.sdt);
+    console.log(menber.namSinh);
+    console.log(menber.queQuan);
+    console.log(menber.canNang);
+    console.log(menber.chieuCao);
+    menber.age();
+    menber.BMI();
+
+    // viết chương trình 
+    // nhập vào màn hình chiều dài và chiều rộng của hcn 
+    // viết viết hàm có tham số tính chu vi diện tích của hcn đó 
+    // hiển thị ra kết qura 
+    let a = prompt("nhập chiều dài hcn: ");
+    let b = prompt("nhập chiều rộng hcn: ");
+    function chuvi(a, b){
+        let chuVi = (Number(a) + Number(b)) *2;
+        return chuVi;
+    }
+    console.log(chuvi(a, b));
+
+    function dientich(c, d){
+        let dienTich = Number(c) * Number(d);
+        return dienTich;
+    }
+    console.log(dientich(a, b));
+ </script>
+</html>

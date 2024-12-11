@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        height: 50vh;
+        width: 100vw;
+    }
+</style>
+<body>
+    <!-- <div>
+        <div class="myslide">
+            <span style="text-align: center;">1/5</span>
+            <img src="./img/img1.png" alt="">
+        </div>
+        <div class="myslide">
+            <span style="text-align: center;">21/5</span>
+            <img src="./img/img2.png" alt="">
+        </div>
+        <div class="myslide">
+            <span style="text-align: center;">3/5</span>
+            <img src="./img/img3.png" alt="">
+        </div>
+        <div class="myslide">
+            <span style="text-align: center;">4/5</span>
+            <img src="./img/img4.jpeg" alt="">
+        </div>
+        <div class="myslide">
+            <span style="text-align: center;">5/5</span>
+            <img src="./img/img5.jpg" alt="">
+        </div>
+    </div>
+    <div>
+        <button onclick="nextslide(-1)"> ảnh trc</button>
+        <button onclick="nextslide(1)"> ảnh sau</button>
+        <button onclick="autoslide()">auto</button>
+        <button onclick="stopslide()">stop</button>
+    </div> -->
+
+
+
+    <!-- Bài 2: Tạo form đăng nhập gồm tài khoản, mật khẩu
+-	Mật khẩu phải khớp “123@123ab”
+-	Tài khoản phải dài hơn 6 ký tự và không quá 20 ký tự
+-	Khi ấn vào nút đăng nhập, nếu lỗi thì sẽ hiển thị sang bên cạnh
+-	Nếu không xảy ra lỗi thì hiển thị thông báo “Đăng nhập thành công” -->
+
+        <div>
+            <table border="1">
+                <thead>
+                    <th>tên</th>
+                    <th>Nội dung</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tài khoản</td>
+                        <td>
+                            <input type="text" id="taikhoan">
+                            <span class="thongbao"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>mật khẩu</td>
+                        <td>
+                            <input type="password" id="matkhau">
+                            <span class="thongbao"></span>
+                        </td>
+                        <tr>
+                            <td colspan="2"> <button onclick="dangnhap()">login</button></td>
+                        </tr>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+
+
+     <!-- Bài 3: Tạo form đăng ký thành viên gồm các thông tin
+-	Họ tên: không được để trống, lớn hơn 7 ký tự
+-	Năm sinh: không được để trống, tuổi phải trên 18 tuổi
+-	Combobox – Loại đăng ký: (thành viên thường, thành viên vip)
+-	Giá tiền: nếu chọn thành viên thường thì giá tự động điền là 3000, vip thì là 5000
+-	Số tháng đăng ký: không được để trống, phải là số
+	Khi ấn đăng ký, nếu lỗi thì hiển thị lỗi ra theo từng trường dữ liệu
+	Nếu không lỗi thì tính tổng tiền = giá tiền * số tháng / in ra màn hình -->
+
+
+        <!-- <div>
+           <table>
+            <thead>
+                <th>Tên </th>
+                <th>Nội dung</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> Họ tên</td>
+                    <td><input type="text" id="hoTen">
+                        <span class="thongbao"></span>
+                    </td>
+                    
+                </tr>            
+                <tr>
+                    <td>Năm Sinh</td>
+                    <td>
+                        <input type="text" id="namsinh">
+                        <span class="thongbao"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Loại đăng ký</td>
+                    <td>
+                        <select name="" id="loaidangky" onchange="chonloai()">
+                            <option value="">vui lòng chọn loại thành viên</option>
+                            <option value="1">Thành viên thường</option>
+                            <option value="2">Thành viên vip</option>
+                        </select>
+                        <span class="thongbao"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>giá tiền</td>
+                    <td>
+                        <input type="text" id="giaTien" disabled>
+                        <span class="thongbao"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Số tháng đăng ký</td>
+                    <td>
+                        <input type="text" id="soThangDangKy">
+                        <span class="thongbao"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tổng tiền</td>
+                    <td>
+                        <input type="text" id="tongtien" disabled>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"> <button onclick="dangky()">đăng ký</button></td>
+                </tr>
+            </tbody>
+           </table>
+        </div>
+         -->
+</body>
+<script src="thithu.js"></script>
+</html>

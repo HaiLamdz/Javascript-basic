@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Đây là trang chủ</h1>
+    <hr>
+    
+        <div>
+            <label for="hoTen">Nhhaapj họ tên</label> <br>
+            <input type="text" id="hoTen">
+        </div>
+        <div>
+            <label for="sdt">nhập số điện thoại</label> <br>
+            <input type="text" id="sdt">
+        </div>
+        <div>
+            <button type="submit" onclick="themSv()" >Thêm sinh viên</button>
+        </div>
+        <div>
+            <h1 id="renderhoTen"></h1>
+            <h2 id="rendersdt"></h2>
+        </div>
+
+        <hr>
+        <div>
+            <label for="soA">nhập số thứ nhất: </label> <br>
+            <input type="text" id="soA">
+        </div>
+        <div>
+            <label for="soB">nhập vào số thứ hai: </label><br>
+            <input type="text"  id="soB">
+        </div>
+        <div>
+            <button onclick="tinh()">Tính toán</button>
+
+        </div>
+        <div>
+            <h1 id="rendernhan">nhân: </h1>
+            <h1 id="renderchia">chia: </h1>
+            <h1 id="rendercong">cộng: </h1>
+            <h1 id="rendertru">trừ: </h1>
+
+        </div>
+        <table id="table" border="1">
+            <tr>
+                <td id="Name">hoTen</td> 
+                <td id="Ten"></td>
+                <td id="Ten1"></td>
+            </tr>
+            <tr>
+                <td id="age">age</td> <br>
+                <td id="tuoi"></td>
+            </tr>
+            <tr>
+                <td id="Numberphone">sdt</td> <br>
+                <td id="sodt"></td>
+            </tr>
+        </table>
+        <table border="1">
+            <thead>
+                <th>họ tên</th>
+                <th>tuổi</th>
+                <th>sdt</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>họ tên</td>
+                    <td>tuổi</td>
+                    <td>sdt</td>
+                </tr>
+            </tbody>
+        </table>
+</body>
+<script>
+    function themSv() {
+        let hoTen = document.getElementById('hoTen');
+        let sdt = document.getElementById('sdt');  
+        let renderhoTen = document.getElementById('renderhoTen');
+        let rendersdt = document.getElementById('rendersdt'); 
+        renderhoTen.innerHTML = hoTen.value;
+        rendersdt.innerHTML = sdt.value;
+    }
+    themSv();
+
+    function tinh() {
+        let soA = document.getElementById('soA');
+        let soB = document.getElementById('soB');
+        let tinhTong = Number(soA.value) + Number(soB.value);
+        let tinhthuong = Number(soA.value) / Number(soB.value);
+        let tinhtich = Number(soA.value) * Number(soB.value);
+        let tinhhieu = Number(soA.value) - Number(soB.value);
+        let rendercong = document.getElementById('rendercong')
+        let rendertru = document.getElementById('rendertru');
+        let rendernhan = document.getElementById('rendernhan');
+        let renderchia = document.getElementById('renderchia')
+        rendercong.innerHTML = tinhTong;
+        rendertru.innerHTML = tinhhieu;
+        rendernhan.innerHTML = tinhtich;
+        renderchia.innerHTML = tinhthuong
+
+    }
+
+    let infor = [
+        {
+            hoTen: "vũ Hải Lam",
+            age: 18,
+            phone: "0983456712"
+        },
+        {
+            hoTen: "Phạm minh hieeu",
+            age: 18,
+            phone: "012345678"
+        },
+        {
+            hoTen: "phạm minh hải",
+            age: 18,
+            phone: "25543764879"
+        }
+    ]
+    // let table = document.getElementById('table');
+    // let Name = document.getElementById('Ten');
+    // let age = document.getElementById('tuoi');
+    // let sdt = document.getElementById('sodt');
+    // Name.innerHTML = infor[0].hoTen + "," + infor[1].hoTen + "," + infor[2].hoTen;
+    // tuoi.innerHTML = infor[0].age + "," + infor[1].age + "," + infor[2].age;
+    // sodt.innerHTML = infor[0].phone + "," + infor[1].phone + "," + infor[2].phone;
+    // ;
+        let tbody = document.getElementsByTagName('tbody')[1]
+
+        // khai báo 1 biến chưa html trong tbody
+        let render_html = '';
+        for (let i = 0; i < infor.length; i++) {
+            render_html += 
+            '<tr>' +
+                '<td>' + infor[i].hoTen + '</td>' +
+                '<td>' + infor[i].age + '</td>' +
+                '<td>' + infor[i].phone + '</td>' +
+            '</tr>'
+
+
+            
+        }
+        tbody.innerHTML = render_html
+    // ví dụ 
+    // cho 1 form nhập vào màn hình hai số 
+    // tính tổng, tích, hiệu, thương của 2 số và in ra màn hình 
+
+    
+</script>
+</html>

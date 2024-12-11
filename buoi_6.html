@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let arrStudent = ["long", "linh", "lan", "mai", "nam"];
+    // console.log(arrStudent[0]);
+    // console.log(arrStudent[1]);
+    // console.log(arrStudent[2]);
+    // console.log(arrStudent[3]);
+    // console.log(arrStudent[4]);
+
+    // sử dung for để in ra các phần tử 
+    // for(let i = 0; i < arrStudent.length; i++){
+    //     // let i = 0: giá trị khới tạo vòng for
+    //     // i < arrStudent.length: điều kiện dừng của vòng for 
+    //     // i++ là bước nhảy của vòng for 
+    //     console.log(arrStudent[i]);
+    // }
+    // // vis duj cho mang gồm số từ 1 - 7 
+    // // in ra mảng bằng for
+    // // dùng for ttinhs tổng các số lẻ trong mảng
+    // // dùng for ttinhs tổng các số chẵn trong mảng
+    // let arr = [1,2,3,4,5,6,7];
+    // let tongchan = 0;
+    // let tongle = 0;
+    // for (let i = 0; i < arr.length; i++){
+    //     console.log(arr[i]);
+    //     if(arr[i]%2==0){
+    //         tongchan += arr[i]; 
+    //     }
+    //     else{
+    //         tongle += arr[i];
+    //     }
+    // }
+    // console.log("tổng chẵn là: " , tongchan);
+    // console.log("tổng lẻ là: " , tongle);
+
+    // // for - of; sẽ duyệt từ đầu mản đến acuoois mảng
+    // let tongchan1 = 0;
+    // for(let item of arr){
+    //     if(item%2==0){
+    //         tongchan1 += item;
+    //     }
+    // }
+    // console.log(tongchan1);
+    // tạo 1 mảng số lẻ từ 1 đến 1-99 
+    // dùng for tính tổng mảng 
+    // dùng for of tính tổng các số chia hết cho 5 
+    let arr = [];
+    let tong = 0;
+    for(let i = 1;i <= 99; i += 2){
+        arr.push(i);
+        console.log(i);
+    }
+    for(let i = 0;i < arr.length;i++){
+        tong += arr[i];
+    }
+    console.log("tổng là: " , tong);
+    let tongthuong = 0;
+    for(let item of arr){
+        if(item % 5 ==0){
+            tongthuong += item;
+        }
+    }
+    console.log("tổng các số chia hết cho 5 là: " , tongthuong);
+    // bài 2 
+    // khai báo 1 mảng có ít nhất 5 phần tử là tên nyc
+    // nhập vào màn hình 1 tên bất kỳ 
+    // kiểm tra xem tên vừa nhập đã có trong mảng hay chưa 
+    // nếu có thì in ra thông báo đã từng quen bạn này rồi 
+    // ko thì theem tên vào đầu mảng in ra thông báo thêm thành thông 
+
+    let arrNYC = ["long", "linh", "lan", "mai", "nam"];
+    for(let i = 0; i < arrNYC.length;i++){
+        console.log(arrNYC[i]);
+    }
+    var a = prompt("nhập tên bất kỳ: ");
+    for(let i = 0;i < arr.length;i++){
+        if(a == arrNYC[i]){
+            alert("đã quen bạn này rồi.")
+            break;
+        }else{
+            arrNYC.unshift(String(a));
+            alert("thêm thành công");
+            break;
+        }
+    }
+    console.log(arrNYC);
+</script>
+</html>

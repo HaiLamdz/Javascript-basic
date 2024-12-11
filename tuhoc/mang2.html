@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // làm việc với aray
+    // 1 to string 
+    // đổi kiểu mảng sanhg chuỗi 
+    // 2 join
+    // biến array về chuỗi
+    // 3 pop 
+    // xóa đi phần tử cuối mảng , trả về chính phần tử đã xóa 
+    // 4 push 
+    // thêm 1 hoặc nhiều phần tử ở cuối mảng và trả về độ dài mới của mảng
+    // 5 shift
+    // xóa đi một phần tử daauf mảng và trả về phần tử đã xóa 
+    // 6 unshift 
+    // thêm 1 hoặc nhiều phần tuwr vào đầu mảng và trả vè đọ dài mới của mảng 
+    // 7 splicing 
+    // có thể xóa cắt và chèn phần tử mới vào mảng 
+    // 8 cancat 
+    // giúp nối hàm 
+    // 9 slicing 
+    // sử dụng khi muốn cắt phần tử của mảng 
+    // var languages = [
+    //     "js",
+    //     "php",
+    //     "ruby"
+    // ];
+    // // 1
+    // console.log(languages.toString());
+    // // 2
+    // console.log(languages.join(" "));
+    // // 3 
+    // console.log(languages.pop());
+    // console.log(languages);
+    // // 4
+    // console.log(languages.push("dart", "lam"));
+    // console.log(languages);
+    // // 5
+    // console.log(languages.shift());
+    // console.log(languages);
+    // // 6
+    // console.log(languages.unshift("hieu", "hưng"));
+    // console.log(languages);
+    // // 7 xóa
+    // languages.splice(1, 1);
+    // console.log(languages);
+    // // 1 vị trí muốn xóa
+    // // 1 số phần tử muốn xóa
+    // // 7 chèn
+    // languages.splice(1, 0, "nam", "hiếu");
+    // // "nam" phần tử muốn chèn
+    // // 8
+    // var languages2 = [
+    //     "js",
+    //     "php",
+    //     "ruby"
+    // ];
+    // var languages3 = [
+    //     "java",
+    //     "php",
+    //     "ruby"
+    // ];
+    // console.log(languages2.concat(languages3));
+    // // 9
+    // console.log(languages.slice(1, 2));
+    // 1 với là là vị trí bắt đâu fvaf vị trí kết thúc
+    var cars = ['Honda', 'Mazda', 'Mercedes'];
+    function joinWithCharacter(array, charactor) {
+    let string =  array.toString() + '-';
+    return string;
+
+}
+
+
+// Ví dụ khi sử dụng
+
+
+// var result = joinWithCharacter(cars, '-');
+
+console.log(cars, result); // Expected: "Honda - Mazda - Mercedes"
+</script>
+</html>

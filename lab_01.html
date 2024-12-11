@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // bài 1
+    console.log("bài 1: Nhập vào 1 số, kiểm tra xem số đó là chẵn hay lẻ");
+    var so1 = prompt("nhập số muốn kiểm tra chẵn hay lẻ: ");
+    //sử dụng if else
+    if(so1%2==0){
+        console.log(so1, " là số chẵn");
+    }else{
+        console.log(so1, " là số lẻ");
+    }
+    //sử dụng toán tử ba ngôi
+    let checkso =so1 % 2 == 0 ? "la so chan" : "la so le";
+    alert(`${so1} ${checkso}`);
+    //bài 2
+    console.log("Bài 2: Nhập vào 3 số, viết 1 chương trình JS để tìm số lớn nhất trong 3 số");
+    var so3 = prompt("vui lòng nhập số 1: ");
+    var so4 = prompt("vui lòng nhập số 2: ");
+    var so5 = prompt("vui lòng nhập số 3: ");
+    console.log(so3);
+    console.log(so4);
+    console.log(so5);
+    if(so3 > so4 && so3 >so5){
+        console.log("số " + so3 + " là số lớn nhất");
+    }else if(so4 > so3 && so4 > so5){
+        console.log("số " + so4 + " là số lớn nhất");
+    }else{
+        console.log("số " + so5 + " là số lớn nhất");
+    }
+    //bài 3
+    console.log("Bài 3: nhập vào chiều cao cân nặng , viết một chương trình JS để tính chỉ số BMI của người dùng. Công thức BMI = cân nặng(kg) / chiều cao (m) * chiều cao (m)");
+    var canNang = prompt("vui lòng nhập cân nặng: ");
+    var chieuCao = prompt("vui lòng nhập chiều cao: ");
+    console.log(canNang + "kg");
+    console.log(chieuCao + "m");
+    var BMI = canNang / (chieuCao * chieuCao);
+    console.log("BMI của người dùng là: " + BMI);
+    //bài 4
+    // cách 1
+    console.log("bài 4: viết 1 chương trình JS để kiểm tra tình trạng hôn nhân của người dùng, người dùng sẽ nhập giới tính và tình trạng hôn nhân, dựa vaof thông tin này, chương trình sẽ đưa ra thông báo alert tương ứng");
+    var gioitinh = prompt("mời nhập vào giới tính: ");
+    var relationship = prompt("mời nhập tình trạng hôn nhân: ");
+    var majoi = "đã kết hôn";
+    var majoi2 = "chưa kết hôn";
+    var gt = "nam";
+    var gt2 = "nữ";
+    if(gioitinh == gt){
+        if(relationship == majoi){
+            alert("đã kết hôn(có vợ).");
+        }else if(relationship == majoi2){
+            alert("chưa kết hôn(chưa có vợ).");
+        }else{
+            alert("giới tính hoặc tình trạng hôn nhân không hợp lệ");
+        }
+    }else if(gioitinh == gt2 ){
+        if(relationship == majoi){
+            alert("đã kết hôn(có chồng).");
+        }else if(relationship == majoi2){
+            alert("chưa kết hôn(chưa có chồng).");
+        }else{
+            alert("giới tính hoặc tình trạng hôn nhân không hợp lệ");
+        }
+    }else{
+        alert("giới tính hoặc tình trạng hôn nhân không hợp lệ");
+    }
+    // cách 2: 
+    let ten = prompt("Nhap vao ho ten: ");
+    let gioiTinh = prompt("Nhap vao gioi tinh: \n(nam la 0) \n(nu la 1)");
+    let honNhan = prompt("Nhap vao tinh trang hon nhan: \n(Da ket hon la 1) \n(Chua ket hon la 0)");
+
+    let checkGT = gioiTinh == 0 ? "Ong" : "Ba";
+    let checkKH = honNhan == 0 ? "chua ket hon" : "da ket hon";
+
+    alert(`${checkGT} ${ten} ${checkKH}`);
+</script>
+</html>

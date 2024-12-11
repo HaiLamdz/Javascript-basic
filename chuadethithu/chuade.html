@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100vw;
+            height: 50vh;
+        };
+        button > .auto{
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Bài 1: Tạo 1 banner slide gồm 5 ảnh, tạo 4 nút: PRE, NEXT, AUTO, STOP
+Viết chức năng tương ứng cho 4 nút vừa tạo
+-	PRE: quay lại ảnh trước
+-	NEXT: chuyển tới ảnh kế tiếp
+-	AUTO: tự động chuyển 
+-	STOP: Ngắt tự động -->
+    <div>
+        <div class="myslide">
+            <div>banner 1</div>
+            <img src="./img/img1.png" alt="">
+        </div>
+        <div class="myslide">
+            <div>banner 2</div>
+            <img src="./img/img2.png" alt="">
+        </div>
+        <div class="myslide">
+            <div>banner 3</div>
+            <img src="./img/img3.png" alt="">
+        </div>
+        <div class="myslide">
+            <div>banner 4</div>
+            <img src="./img/img4.jpeg" alt="">
+        </div>
+        <div class="myslide">
+            <div>banner 5</div>
+            <img src="./img/img5.jpg" alt="">
+        </div>
+
+        <div>
+            <button onclick="chuyenanh(1)">trước </button>
+            <button onclick="chuyenanh(-1)">sau</button>
+            <button class="auto" onclick="auto()">tự động</button>
+            <button onclick="stop()">stop</button>
+        </div>
+    </div>
+
+    <!-- Bài 2: Tạo form đăng nhập gồm tài khoản, mật khẩu
+-	Mật khẩu phải khớp “123@123ab”
+-	Tài khoản phải dài hơn 6 ký tự và không quá 20 ký tự
+-	Khi ấn vào nút đăng nhập, nếu lỗi thì sẽ hiển thị sang bên cạnh
+-	Nếu không xảy ra lỗi thì hiển thị thông báo “Đăng nhập thành công” -->
+<h1>bài 2</h1>
+    <div>
+        <table>
+            <tr>
+                <td><label for="">Tài khoản</label></td>
+                <td> <input type="text" id="taikhoan"></td>
+                <td><span class="thongbao"></span></td>
+            </tr>
+            <br>
+            <tr>
+                <td><label for="">mật khẩu</label></td>
+                <td> <input type="text" id="passwork"></td>
+                <td><span class="thongbao"></span></td>
+            </tr>
+            <tr>
+                <td><button  onclick="dangnhap()">đăng nhập</button></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Bài 3: Tạo form đăng ký thành viên gồm các thông tin
+-	Họ tên: không được để trống, lớn hơn 7 ký tự
+-	Năm sinh: không được để trống, tuổi phải trên 18 tuổi
+-	Combobox – Loại đăng ký: (thành viên thường, thành viên vip)
+-	Giá tiền: nếu chọn thành viên thường thì giá tự động điền là 3000, vip thì là 5000
+-	Số tháng đăng ký: không được để trống, phải là số
+	Khi ấn đăng ký, nếu lỗi thì hiển thị lỗi ra theo từng trường dữ liệu
+	Nếu không lỗi thì tính tổng tiền = giá tiền * số tháng / in ra màn hình -->
+<h1>bài 3</h1>
+<div>
+    <table>
+        <tr>
+            <td><label for="">họ Tên</label></td>
+            <td> <input type="text" id="hoTen"></td>
+            <td><span class="thongbao1"></span></td>
+        </tr>
+        <br>
+        <tr>
+            <td><label for="">nam sinh</label></td>
+            <td> <input type="text" id="namsinh"></td>
+            <td><span class="thongbao1"></span></td>
+        </tr>
+        <tr>
+            <td><label for="">combobox</label></td>
+            <td>
+                <select name="" id="loaidangky" onchange="chonloai()">
+                    <option value="0">Vui lòng chọn loại thành viên</option>
+                    <option value="1">thành viên thường</option>
+                    <option value="2">thành viên vip</option>
+                </select>
+            </td>
+            <td><span class="thongbao1"></span></td>
+        </tr>
+        <tr>
+            <td><label for="">giá Tiền</label></td>
+            <td> <input type="text" id="giatien" disabled></td>
+        </tr>
+        <tr>
+            <td><label for="">số tháng đăng ký</label></td>
+            <td> <input type="text" id="sothangdangky"></td>
+            <td><span class="thongbao1"></span></td>
+        </tr>
+        <tr>
+            <td><label for="">ttoongr tiền</label></td>
+            <td> <input type="text" id="tongtien" disabled></td>
+        </tr>
+        
+        <tr>
+            <td><button  onclick="dangky()">đăng ký</button></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+<script src="chuadw.js"></script>
+
+</html>

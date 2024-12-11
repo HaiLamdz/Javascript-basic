@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // bài 1 
+    // viết chuowgnf trình nhập vào 1 mảng số nguyên bất kỳ 
+    // viết hàm có tham số trả về tổng các số chẵn trong mảng
+    // in ra kết quả
+    // let arrNumber = [];
+    // let newNumber = prompt("nhập vào mảng số nguyên")
+    // for (let index = 0; index < newNumber; index++) {
+    //     let input = prompt("Nhạp vào nhần tử thứ : " + (index+1))
+    //     arrNumber.push(input);
+    // }
+    // console.log(newNumber);
+    // function tinhtongchan(arrImport){
+    //     let tinhtong = 0;
+    //     for(let index = 0; index < arrImport.length; index++){
+    //         if(arrImport[index] % 2 == 0){
+    //             tinhtong += Number(arrImport[index]);
+    //         }
+           
+    //     }
+    //     return tinhtong;
+    // }
+    // console.log(tinhtongchan(arrNumber));       
+    // bài 3 
+    // cho một mảng rỗng tên của sinh viên 
+    // nhập vào 6 tên từ bàn phím
+    // trong đó 5 tên đầu tiên sẽ đưa vào mảng, tên thứ 6 sẽ tách riêng
+    // viết hàm kiểm tra xem tên thứ 6 có trong mảng tên thứ 6 có trong mảng khong
+    // nếu có, trả về "tên này đã tồn tại trong danh sách"
+    // nếu không thêm tên vào cuối mảng và trả về đã thêm tên vào danh sách
+    // in ra kết quả
+    // bài 2 
+    // viết chương trình nhập vào màn hình 2 số
+    // vieetd hàm nhận vào 2 số và tính phương trình bậc 1 
+    // in ra kết qur 
+        // let a = prompt("nhập a: " );
+        // let b = prompt("nhập b: ");
+        // function GiaiPT(a,b) {
+        //     if(a==0){
+        //         if(b==0){A
+        //             return "PT vô số nghiệm";
+        //         }else{
+        //             return "pt vô nghiệm";
+        //         }
+        //     }else{
+        //         if(b==0){
+        //             return "pt có nghiệm x = 0";
+        //         }else{
+        //             nghiem = -b/a;
+        //             return "pt có nghiệm x = " + nghiem;
+        //         }
+        //     }
+        // }
+        // console.log(GiaiPT(a,b));
+    // bài 3 
+    // cho một mảng rỗng tên của sinh viên 
+    // nhập vào 6 tên từ bàn phím
+    // trong đó 5 tên đầu tiên sẽ đưa vào mảng, tên thứ 6 sẽ tách riêng
+    // viết hàm kiểm tra xem tên thứ 6 có trong mảng tên thứ 6 có trong mảng khong
+    // nếu có, trả về "tên này đã tồn tại trong danh sách"
+    // nếu không thêm tên vào cuối mảng và trả về đã thêm tên vào danh sách
+    // in ra kết quả
+    let arrName = [];
+    for(let index = 0; index < 6; index++){
+        
+        let inputName = prompt("nhập vào tên số: " + (index + 1));
+        if(index <= 4){
+            arrName.push(inputName);
+        }else{
+            lastName = inputName;
+        }
+
+    }
+    console.log(arrName);
+    console.log(lastName);
+    function checkName(lastName, arrName) {
+        if(arrName.indexOf(lastName) !== -1){
+            console.log("đã có tên này trong mảng");
+        }else{
+            arrName.push(lastName);
+            console.log(arrName);
+        }
+    }
+    checkName(lastName, arrName);
+    
+</script>
+</html>

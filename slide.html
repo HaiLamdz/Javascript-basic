@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imgstyle > img{
+            width: 100vw;
+            height: 50vh;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="imgstyle">
+            <div >1/3</div>
+            <img src="https://daihoc.fpt.edu.vn/wp-content/uploads/2019/11/banner-fptu.png" alt="">
+        </div>
+        <div class="imgstyle">
+            <div >2/3</div>
+            <img src="https://tse4.mm.bing.net/th?id=OIP.5zhZ88LuEkegbVo-NG-x6AHaDg&pid=Api&P=0&h=220" alt="">
+        </div>
+        <div class="imgstyle">
+            <div >3/3</div>
+            <img src="https://tse3.mm.bing.net/th?id=OIP.AHkfDPLscHjKciXBjeQr6QHaCV&pid=Api&P=0&h=220" alt="">
+        </div>
+        <div>
+            <button onclick="chuyenanh(-1)">ảnh trc</button>
+            <button onclick="chuyenanh(1)">ảnh sau</button>
+            <button onclick="auto()">tự động</button>
+            <button onclick="stop()">dừng</button>
+        </div>
+    </div>
+</body>
+<script>
+    // khởi tạo biến thứ tự của slide
+
+    let slideindex = 0;
+
+    // viết hàm chuyển slide
+    function slide(){
+        // gọi đến class chứa ảnh
+        let slideImg = document.getElementsByClassName('imgstyle')
+        // ẩn tòa bộ các ảnh 
+        for (let i = 0; i < slideImg.length; i++) {
+            slideImg[i].style.display = 'none'
+            
+        }
+
+
+
+        // nếu slideindex > 2, thì sẽ quay lại slide đầu tiên
+        if(slideindex >= slideImg.length){
+            slideindex = 0
+        }
+        // nếu slideindex là số âm, thì sẽ quay lại slide cuối cùng
+        if(slideindex < 0){
+            slideindex = slideImg.length - 1
+        }
+        // hiển thị slide thứ slideindex
+        slideImg[slideindex].style.display = 'block'
+
+    }
+    slide();
+
+    // viết hàm chuyển slide
+    function chuyenanh(n){
+        slide(slideindex += n)
+    }
+
+    // KHỞI TẠO BIẾN ĐỂ CHẠY AUTO 
+    let autoImg;
+    function auto(){
+        slide();
+        slideindex++;
+        // gọi lại hàm auto sau 1 giây 
+        autoImg = setTimeout(auto, 1000)
+    }
+    // dừng auto 
+    function stop(){
+        clearInterval(autoImg)
+    }
+</script>
+</html>

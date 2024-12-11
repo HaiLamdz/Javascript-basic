@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    //phương trình bậc 2
+    var x = prompt("nhập số a:");
+    var y = prompt("nhập số b:");
+    var z = prompt("nhập số c: ");
+    console.log(x + "x*2 + " + y + "x + " + z);
+    var denta = y**2 - 4*y*z;
+    console.log(denta);
+    if(denta > 0){
+        var x1 = (-y + Math.sqrt(denta))/(2*z);
+        var x2 = (-y - Math.sqrt(denta))/(2*z);
+        console.log("phương tình có 2 nghiệm phân biệt");
+        console.log(x1);
+        console.log(x2);
+    }else if(denta = 0){
+        var x = -y / 2*x;
+        console.log("Phương trình có nghiệm kếp x = " + x);
+    }else{
+        console.log("phường trình vô nghiệm");
+    }
+1
+</script>
+</html>
